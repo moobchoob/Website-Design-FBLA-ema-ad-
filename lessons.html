@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fluence — Lessons</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Fluence</a>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="lessons.html">Lessons</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page">
+      <h1>Lessons, Quizzes & Videos</h1>
+      <p class="muted">Find lessons by level, follow along with videos, and take quizzes. Click a card to see links and resources.</p>
+
+      <section class="lessons-grid" id="lessons-grid">
+        <!-- Example lesson card -->
+        <article class="lesson-card">
+          <div class="lesson-image">Image</div>
+          <div class="lesson-body">
+            <h3>Lesson 1: Basics</h3>
+            <p>Simple greetings, introductions, and common phrases.</p>
+            <div class="lesson-links">
+              <a class="btn small" href="#">Lesson PDF</a>
+              <a class="btn small" href="#">Quiz</a>
+              <a class="btn small" href="#">Video</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="lesson-card">
+          <div class="lesson-image">Image</div>
+          <div class="lesson-body">
+            <h3>Lesson 2: At School</h3>
+            <p>Vocabulary and phrases used around school and classes.</p>
+            <div class="lesson-links">
+              <a class="btn small" href="#">Lesson PDF</a>
+              <a class="btn small" href="#">Quiz</a>
+              <a class="btn small" href="#">Video</a>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <section class="add-lesson">
+        <h3>Add a lesson (local only)</h3>
+        <form id="add-lesson-form">
+          <input id="lesson-title" placeholder="Title" required />
+          <input id="lesson-link" placeholder="File or video URL" />
+          <textarea id="lesson-desc" placeholder="Short description"></textarea>
+          <button class="btn primary" type="submit">Add</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Fluence • Lessons</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

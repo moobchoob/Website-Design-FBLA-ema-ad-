@@ -1,0 +1,67 @@
+:root{
+  --blue:#3971b8;
+  --vanilla:#f6e6a5;
+  --tea:#c8d69b;
+  --ivory:#fbfce0;
+  --dark:#343b1b;
+  --muted:#6b6b6b;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--dark); background:linear-gradient(180deg,var(--ivory),#fff);}
+.container{max-width:1000px;margin:0 auto;padding:1rem}
+.site-header{background:var(--blue);color:var(--ivory);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem}
+.logo{font-weight:800;color:var(--ivory);text-decoration:none;font-size:1.25rem}
+.main-nav a{color:var(--ivory);margin-left:1rem;text-decoration:none;font-weight:600}
+.hero{display:flex;gap:1rem;align-items:center;padding:2rem 1rem}
+.hero-left{flex:1}
+.hero-right{width:320px}
+.image-placeholder{height:220px;background:linear-gradient(135deg,var(--vanilla),var(--tea));border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--dark);font-weight:700}
+.lead{font-size:1.1rem;color:var(--muted)}
+.features{list-style: none;padding:0;margin:1rem 0;display:grid;gap:.5rem}
+.features li{background:rgba(52,59,27,0.06);padding:.5rem;border-radius:10px}
+.cta-row{display:flex;gap:0.75rem;margin-top:1rem}
+.btn{padding:.6rem .9rem;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;justify-content:center}
+.btn.primary{background:var(--blue);color:var(--ivory);border:0}
+.btn.outline{border:2px solid var(--blue);color:var(--blue);background:transparent}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;padding:1rem 1rem 2rem}
+.card{background:var(--ivory);border-radius:12px;padding:1rem;box-shadow:0 6px 18px rgba(57,113,184,0.08)}
+.site-footer{border-top:1px dashed rgba(0,0,0,0.05);padding:1rem 0;margin-top:2rem;background:transparent}
+.page{padding:1.25rem 1rem}
+.muted{color:var(--muted)}
+
+/* Calendar styles */
+#calendar-wrap{max-width:720px;margin:1rem 0}
+.calendar-header{display:flex;align-items:center;justify-content:space-between;background:var(--vanilla);padding:.5rem;border-radius:10px}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;padding:8px;margin-top:8px}
+.day{background:linear-gradient(180deg,#fff,#fbfbfb);border-radius:10px;padding:8px;min-height:78px;position:relative}
+.day .date-num{font-size:.95rem;font-weight:700}
+.day .events{margin-top:6px;font-size:.85rem;color:var(--muted)}
+.day.today{box-shadow:0 0 0 3px rgba(57,113,184,0.12)}
+
+.events-list{margin-top:1.5rem}
+.events-list ul{padding-left:1rem}
+
+/* modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.35);z-index:50}
+.modal.hidden{display:none}
+.modal-content{background:#fff;padding:1rem;border-radius:10px;max-width:420px;width:100%}
+.modal-content label{display:block;margin:.5rem 0}
+.modal-actions{display:flex;gap:.5rem;justify-content:flex-end;margin-top:.5rem}
+
+/* Lessons */
+.lessons-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.lesson-card{background:linear-gradient(180deg,var(--ivory),#fff);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.lesson-image{height:120px;background:linear-gradient(135deg,var(--tea),var(--vanilla));display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--dark)}
+.lesson-body{padding:0.75rem}
+.lesson-links{display:flex;gap:.5rem;margin-top:.5rem}
+.btn.small{padding:.4rem .6rem;border-radius:8px;font-size:.85rem}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.about-card{background:var(--ivory);padding:1rem;border-radius:10px}
+
+@media (max-width:740px){
+  .hero{flex-direction:column}
+  .hero-right{width:100%}
+  .about-grid{grid-template-columns:1fr}
+}

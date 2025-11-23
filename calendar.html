@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fluence — Calendar</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Fluence</a>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="lessons.html">Lessons</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page">
+      <h1>Interactive Calendar</h1>
+      <p class="muted">See upcoming tutoring sessions and add your own events. Events save locally in your browser.</p>
+
+      <div id="calendar-wrap">
+        <div class="calendar-header">
+          <button id="prev">‹</button>
+          <h2 id="monthYear">Month Year</h2>
+          <button id="next">›</button>
+        </div>
+        <div id="calendar" class="calendar"></div>
+      </div>
+
+      <div id="events-list" class="events-list">
+        <h3>Events</h3>
+        <ul id="events"></ul>
+      </div>
+    </main>
+
+    <!-- Modal for adding event -->
+    <div id="event-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Add Event</h3>
+        <form id="event-form">
+          <label>Title <input type="text" id="evt-title" required></label>
+          <label>Date <input type="date" id="evt-date" required></label>
+          <label>Time <input type="time" id="evt-time"></label>
+          <label>Link (optional) <input type="url" id="evt-link"></label>
+          <label>Description <textarea id="evt-desc"></textarea></label>
+          <div class="modal-actions">
+            <button type="submit" class="btn primary">Save</button>
+            <button type="button" id="evt-cancel" class="btn outline">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Fluence • Calendar</p>
+      </div>
+    </footer>
+
+    <script src="js/calendar.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
